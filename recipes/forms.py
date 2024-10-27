@@ -4,9 +4,24 @@ from .models import Recipe, Review
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = Review
-        fields = '__all__'
+        fields = (
+            'headline',
+            'description',
+            'author',
+        )
 
 class RecipeForm(forms.ModelForm):
     class Meta:
         model = Recipe
-        fields = '__all__' # A security concern but this is ok for this app
+        fields = (
+            'title',
+            'tags',
+            'category',
+            'description',
+            'ingredients',
+            'instructions',
+            'notes',
+            'prep_time',
+            'cook_time',
+            'image_source',
+        )
